@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>Log-in | viajes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/style.css">
+<style type="text/css"></style>
+<body onload="noneSpinner()">
+<div class="text-top">
+  
+</div>
+
+  <div class="login-box">
+    <!--<img src="img/pics/logo.png" class="avatar" alt="Avatar Image">-->
+    <p id="type"></p>
+    <!--<h1> Iniciar </h1>-->
+    <!-- formulario -->
+    <form> 
+      <!--username -->
+      <label for="username">Nombre de usuario</label>
+      <input id="user" type="text" placeholder="Introduce tu nombre">
+
+      <!-- password -->
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" placeholder="Introduce tu contraseña">
+      <input type="button" value="Acceder" onclick="validar()" >
+      <div class="login-box-footer">
+      <!-- opciones de ayuda -->
+      <a href="#">Olvidaste tu contraseña?</a><br>
+      <a href="#">No tienes una cuenta?</a>
+    </div>
+
+      <!-- spinner -->
+      <div id="spinner" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <!-- fin spinner -->
+
+    </form>
+  </div>
+
+
+  <script>
+
+    /**   funciones   **/
+
+  function typewrite(element,text,delay) {
+        /*
+        element:  elemento donde insertar el texto.
+        text:   texto a tipear.
+        delay:    tiempo entre teclas (en milisegundos).
+        */
+        // Insertar la siguiente letra
+        aux = document.getElementById(element).innerHTML;
+        aux = aux.concat(text.charAt(0));
+        document.getElementById(element).innerHTML = aux;
+
+        // Esperar "delay" milisegundos para la próxima tecla
+        if (text.length > 1) {
+          // Eliminar la tecla actual
+          text = text.substr(1);
+          setTimeout(typewrite,delay,element,text,delay);
+      }
+}
+  function alertFunc(){
+    typewrite("type","Iniciar sesión",100);
+  }
+
+/** para comprobar contraseña y usuario **/
+
+function validar(){
+  blockSpinner();
+   // Obtener valor de los elementos
+   var user = document.getElementById('user').value;
+   var password = document.getElementById('password').value;
+
+   // Si tanto el usuario como la contraseñan pasan..
+   if(user === "hola" && password === "mundo"){
+  } else {
+    
+  }
+};
+
+function noneSpinner(){
+      document.getElementById("spinner").style.display = "none";
+}
+
+function blockSpinner() {
+    document.getElementById("spinner").style.display = "block";
+}
+
+
+/** intervalos **/
+
+/*
+setInterval(  ()=>{
+  document.getElementById("type").innerHTML = "";
+  alertFunc();
+},4000);
+*/
+
+
+
+/** ejecutables **/
+alertFunc();
+
+
+
+
+/** spinner escrito en jquery**/
+
+ 
+  </script>
+
+</body>
+</html>

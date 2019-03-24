@@ -1,0 +1,222 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(../img/pics/viaje1.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.login-box{
+  background-color: rgba(38, 12, 12, 0.6);
+  width: 400px;
+  height: 500px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  /* se pone delante */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  /* 70 hacia arriba y 30 hacia los lados */
+  padding: 70px 30px;
+  border-radius: 2%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #87CEEB ;
+}
+
+/** si se pone logo o no **/
+.login-box .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+
+.text-top{
+  top: 10%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.login-box p{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box h1{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box label{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  /*este en una sola linea*/
+  display: block;
+}
+
+.login-box input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #87CEEB  ;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-box input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #87CEEB ;
+  color: black;
+  font-size: 16px;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+ /*para cuando se pulsa encima de las opciones*/
+.login-box a:hover {
+  color: #fff;
+}
+
+.login-box input[type="submit"]{
+  opacity: 0.6;
+}
+
+.login-box input[type="submit"]:hover {
+  opacity: 1.0;
+}
+
+/**
+footer{
+  background-color: #00FFFF;
+  position:fixed;
+  bottom:0;
+  left:0;
+  height:32px;
+  width: 100%;
+  
+}
+footer a{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 32px;
+}
+
+**/
+
+
+
+/** spinner **/
+
+
+.lds-roller {
+   display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+    left: calc(50% - 32px);
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #87CEEB; /** color del spinner **/
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/** fin spinner **/
